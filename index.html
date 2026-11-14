@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison de Five — Parisian Patisserie &amp; Street-Chic Brews</title>
+
+  <!-- Google Fonts: Fredoka, Fraunces, Plus Jakarta Sans & Alex Brush for Maison de Five Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,600&family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chiffon: '#FFF8CA',
+            rosewood: '#6B0B0C',
+            coffeebean: '#2D120D',
+            botticelli: '#CDE3E8',
+            lipred: '#9E0508',
+          },
+          fontFamily: {
+            display: ['Fredoka', 'sans-serif'],
+            serif: ['Fraunces', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            script: ['Alex Brush', 'cursive'],
+          },
+          boxShadow: {
+            'hard': '4px 4px 0px #2D120D',
+            'hard-lg': '6px 6px 0px #2D120D',
+            'hard-rose': '5px 5px 0px #6B0B0C',
+            'hard-botticelli': '5px 5px 0px #CDE3E8',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-chiffon text-coffeebean font-sans antialiased selection:bg-rosewood selection:text-chiffon">
+
+  <!-- Reusable SVG Defs (Glossy Lipstick Kiss Mark & Clip Paths) -->
+  <svg width="0" height="0" class="hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="lipGlossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#B8080C" />
+        <stop offset="50%" stop-color="#8B0305" />
+        <stop offset="100%" stop-color="#5E0203" />
+      </linearGradient>
+      <symbol id="kiss-mark" viewBox="0 0 120 75">
+        <!-- Upper Lip -->
+        <path d="M10,36 C22,22 38,10 50,18 C55,21 58,22 60,22 C62,22 65,21 70,18 C82,10 98,22 110,36 C96,35 76,30 60,33 C44,30 24,35 10,36 Z" fill="url(#lipGlossGrad)"/>
+        <!-- Lower Lip -->
+        <path d="M14,41 C30,40 46,42 60,42 C74,42 90,40 106,41 C98,58 80,68 60,68 C40,68 22,58 14,41 Z" fill="url(#lipGlossGrad)"/>
+        <!-- Lip Texture & Gloss Highlights -->
+        <path d="M35,23 Q42,17 48,21" stroke="#FF8A8C" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75"/>
+        <path d="M72,21 Q78,17 85,23" stroke="#FF8A8C" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75"/>
+        <path d="M34,54 Q60,63 86,54" stroke="#FF9E9E" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+        <path d="M44,48 Q60,51 76,48" stroke="#FFF8CA" stroke-width="1.3" stroke-linecap="round" fill="none" opacity="0.45"/>
+        <!-- Fine Lip Creases -->
+        <path d="M30,42 L28,50 M42,42 L40,56 M53,42 L52,62 M67,42 L68,62 M78,42 L80,56 M90,42 L92,50" stroke="#4A0102" stroke-width="1.1" stroke-linecap="round" opacity="0.5"/>
+        <path d="M35,34 L33,27 M47,32 L46,24 M73,32 L74,24 M85,34 L87,27" stroke="#4A0102" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- 1. Top Rosewood Marquee Banner -->
+  <div class="bg-rosewood text-chiffon text-[11px] sm:text-xs font-bold tracking-[0.16em] uppercase py-2.5 overflow-hidden border-b-2 border-coffeebean">
+    <div class="marquee-track">
+      <span>• FRESH SHIO PANS OUT OF THE OVEN AT 7:30 AM &nbsp;&nbsp;• CEREMONIAL UJI MATCHA WHISKED TO ORDER &nbsp;&nbsp;• PARISIAN PATISSERIE MEETS STREET SWAG &nbsp;&nbsp;• MAISON DE FIVE — VELARIS, MERIDIAN CITY &nbsp;&nbsp;• BURNT BASQUE CHEESECAKES DAILY &nbsp;&nbsp;</span>
+      <span>• FRESH SHIO PANS OUT OF THE OVEN AT 7:30 AM &nbsp;&nbsp;• CEREMONIAL UJI MATCHA WHISKED TO ORDER &nbsp;&nbsp;• PARISIAN PATISSERIE MEETS STREET SWAG &nbsp;&nbsp;• MAISON DE FIVE — VELARIS, MERIDIAN CITY &nbsp;&nbsp;• BURNT BASQUE CHEESECAKES DAILY &nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-chiffon/95 backdrop-blur-md border-b-2 border-coffeebean">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+      <!-- Left Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-bold tracking-[0.14em] uppercase text-coffeebean">
+        <a href="#home" class="hover:text-rosewood transition-colors">Home</a>
+        <a href="#about" class="hover:text-rosewood transition-colors">About Us</a>
+        <a href="#menu" class="hover:text-rosewood transition-colors">Menu</a>
+      </nav>
+
+      <!-- Center Brand Logo (Stacked Calligraphic Script + Lipstick Kiss) -->
+      <a href="#home" class="flex items-center justify-center group py-1" aria-label="Maison de Five Home">
+        <div class="relative flex flex-col items-center leading-none select-none transition-transform duration-300 group-hover:scale-105">
+          <span class="font-script text-[2.15rem] sm:text-[2.55rem] text-lipred tracking-normal drop-shadow-[0_1px_0_rgba(45,18,13,0.15)]" style="line-height: 0.78;">
+            Maison
+          </span>
+          <div class="flex items-center -mt-1">
+            <span class="font-script text-[2.15rem] sm:text-[2.55rem] text-lipred tracking-normal drop-shadow-[0_1px_0_rgba(45,18,13,0.15)]" style="line-height: 0.85;">
+              de Five
+            </span>
+            <svg class="w-7 h-5 sm:w-8 sm:h-6 -ml-0.5 mt-1 transform -rotate-6" aria-hidden="true">
+              <use href="#kiss-mark"></use>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Right Nav Links + Tray Button -->
+      <div class="flex items-center gap-5 sm:gap-7">
+        <nav class="hidden md:flex items-center gap-7 text-xs font-bold tracking-[0.14em] uppercase text-coffeebean">
+          <a href="#crew" class="hover:text-rosewood transition-colors">Our Crew</a>
+          <a href="#visit" class="hover:text-rosewood transition-colors">Visit Us</a>
+        </nav>
+
+        <button onclick="toggleTray()" class="relative inline-flex items-center gap-2 bg-rosewood text-chiffon text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-full border-2 border-coffeebean shadow-hard hover:-translate-y-0.5 transition-all cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span>Tray</span>
+          <span id="tray-count" class="bg-botticelli text-coffeebean text-[11px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center border border-coffeebean">0</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg border-2 border-coffeebean bg-botticelli text-coffeebean">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-chiffon border-t-2 border-coffeebean px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-widest">
+      <a href="#home" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-rosewood">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-rosewood">About Us</a>
+      <a href="#menu" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-rosewood">Menu</a>
+      <a href="#crew" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-rosewood">Our Crew</a>
+      <a href="#visit" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-rosewood">Visit Us</a>
+    </div>
+  </header>
+
+  <!-- 3. HOME / HERO SECTION -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-botticelli/70 via-botticelli/35 to-chiffon pt-10 pb-20 lg:py-20">
+    <!-- Decorative Floating Starbursts & Kiss Marks -->
+    <div class="hidden lg:block absolute top-14 left-12 text-rosewood/30 animate-pulse">
+      <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+    </div>
+    <div class="hidden lg:block absolute bottom-20 left-1/3 opacity-25 transform -rotate-12">
+      <svg class="w-14 h-9"><use href="#kiss-mark"></use></svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Playful Display Typography & CTAs -->
+        <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 bg-chiffon border-2 border-coffeebean px-4 py-1.5 rounded-full shadow-hard text-xs font-bold uppercase tracking-widest text-rosewood">
+            <span class="w-2.5 h-2.5 rounded-full bg-rosewood animate-ping"></span>
+            Signature Coffee • Uji Matcha • Shio Pans
+          </div>
+
+          <h1 class="font-display text-5xl sm:text-6xl xl:text-[4.25rem] leading-[1.03] text-coffeebean tracking-tight">
+            Where <span class="text-rosewood">Velvet</span> Espresso Meets <span class="font-serif italic font-semibold text-rosewood underline decoration-botticelli decoration-8 underline-offset-4">Parisian</span> Swag.
+          </h1>
+
+          <p class="text-base sm:text-lg text-coffeebean/85 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+            Small-batch single-origin espresso, ceremonial Uji matcha lattes, flaky salted butter Shio Pans, and burnt Basque cheesecakes—served with effortless street-chic attitude.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#menu" class="inline-flex items-center gap-2 bg-rosewood text-chiffon font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-full border-2 border-coffeebean shadow-hard hover:-translate-y-1 transition-all">
+              Explore The Menu
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#visit" class="inline-flex items-center gap-2 bg-botticelli text-coffeebean font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-full border-2 border-coffeebean shadow-hard hover:-translate-y-1 transition-all">
+              Visit Us
+            </a>
+          </div>
+
+          <!-- Quick 3-Badge Strip -->
+          <div class="pt-6 grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+            <div class="bg-chiffon/90 border-2 border-coffeebean rounded-2xl p-3 text-center shadow-hard">
+              <div class="font-display text-lg text-rosewood">5 Pillars</div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-coffeebean/75">Craft &amp; Flavor</div>
+            </div>
+            <div class="bg-chiffon/90 border-2 border-coffeebean rounded-2xl p-3 text-center shadow-hard">
+              <div class="font-display text-lg text-rosewood">100% Uji</div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-coffeebean/75">First-Harvest</div>
+            </div>
+            <div class="bg-chiffon/90 border-2 border-coffeebean rounded-2xl p-3 text-center shadow-hard">
+              <div class="font-display text-lg text-rosewood">7:30 AM</div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-coffeebean/75">Warm Shio Pans</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Scrapbook Framed Hero Showcase -->
+        <div class="lg:col-span-6 relative flex justify-center">
+          <!-- Checkered Rosewood/Chiffon Scrapbook Frame -->
+          <div class="relative w-full max-w-md sm:max-w-lg">
+            <!-- Top-Left Maison de Five Awning Strip Badge -->
+            <div class="absolute -top-6 -left-3 sm:-left-6 z-20 awning-stripes border-2 border-coffeebean rounded-2xl px-5 py-3 shadow-hard transform -rotate-6">
+              <div class="bg-chiffon/95 px-3 py-1 rounded-xl border border-coffeebean flex items-center gap-1.5">
+                <span class="font-script text-2xl text-lipred leading-none">Maison de Five</span>
+                <svg class="w-5 h-3.5"><use href="#kiss-mark"></use></svg>
+              </div>
+            </div>
+
+            <!-- Main Checkered Frame -->
+            <div class="rosewood-checker p-4 sm:p-5 rounded-[2.25rem] border-2 border-coffeebean shadow-hard-lg">
+              <div class="relative overflow-hidden rounded-[1.6rem] border-2 border-coffeebean bg-chiffon aspect-[4/4.3]">
+                <img 
+                  src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=85" 
+                  alt="Maison de Five golden croissants, shio pan and artisan coffee" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+                <!-- Bottom Caption Pill inside Hero Photo -->
+                <div class="absolute bottom-4 left-4 right-4 bg-chiffon/95 backdrop-blur-sm border-2 border-coffeebean rounded-2xl p-3.5 flex items-center justify-between shadow-hard">
+                  <div>
+                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-rosewood block">Morning Drop • House Pairing</span>
+                    <span class="font-serif font-bold text-sm sm:text-base text-coffeebean">Shio Pan du Classique &amp; Velvet Latte</span>
+                  </div>
+                  <button onclick="addToTray('Shio Pan du classique', 15000)" class="bg-rosewood text-chiffon text-xs font-bold px-3.5 py-2 rounded-full border border-coffeebean hover:bg-coffeebean transition-colors cursor-pointer">
+                    + Tray
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Circle Matcha Stamp -->
+            <div class="hidden sm:flex absolute -bottom-7 -right-5 z-20 w-32 h-32 rounded-full bg-botticelli border-2 border-coffeebean shadow-hard p-2 items-center justify-center transform rotate-6">
+              <div class="w-full h-full rounded-full overflow-hidden border border-coffeebean relative">
+                <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=400&q=80" alt="Iced Matcha Latte" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-coffeebean/25 flex items-center justify-center">
+                  <span class="bg-chiffon text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full border border-coffeebean">Uji Matcha</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Scalloped Cloud Divider into About Us -->
+  <div class="w-full overflow-hidden leading-none bg-chiffon">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" class="w-full h-8 sm:h-12 fill-botticelli/35">
+      <path d="M0,0 L1200,0 L1200,25 C1150,55 1080,55 1030,25 C980,55 910,55 860,25 C810,55 740,55 690,25 C640,55 570,55 520,25 C470,55 400,55 350,25 C300,55 230,55 180,25 C130,55 60,55 0,25 Z"></path>
+    </svg>
+  </div>
+
+  <!-- 4. ABOUT US + CAFE PHOTO SHOWCASE -->
+  <section id="about" class="py-16 sm:py-24 bg-chiffon relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Editorial Intro -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <div class="lg:col-span-6 space-y-5">
+          <span class="inline-block bg-botticelli text-coffeebean border-2 border-coffeebean px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-hard">
+            Our Story &amp; Space
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl text-coffeebean leading-tight">
+            Classic Patisserie Craft, <span class="font-serif italic text-rosewood">Unapologetic</span> Street Energy.
+          </h2>
+          <p class="text-coffeebean/85 text-base sm:text-lg leading-relaxed">
+            Born from a love affair between classic Parisian corner patisseries and modern street-graphic culture, <strong>Maison de Five</strong> is built around five pillars: <em>love, quality, aroma, texture, and style</em>.
+          </p>
+          <p class="text-coffeebean/80 text-sm sm:text-base leading-relaxed">
+            Step under our Botticelli-striped awning into a sun-drenched room filled with the scent of caramelized French butter, vinyl soul tracks, and double-ristretto espresso shots pulled on custom brass levers. Whether you're grabbing a warm <strong>Shio Pan du classique</strong> on the run or lingering over a <strong>Burnt Vanilla Basque</strong> slice, this is your daily ritual elevated.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <span class="px-4 py-2 rounded-xl bg-botticelli/50 border-2 border-coffeebean text-xs font-bold uppercase tracking-wider">72-Hr Fermented Dough</span>
+            <span class="px-4 py-2 rounded-xl bg-botticelli/50 border-2 border-coffeebean text-xs font-bold uppercase tracking-wider">Single-Origin Roasts</span>
+            <span class="px-4 py-2 rounded-xl bg-botticelli/50 border-2 border-coffeebean text-xs font-bold uppercase tracking-wider">Kyoto First-Flush Matcha</span>
+          </div>
+        </div>
+
+        <!-- Right Photo Collage Card -->
+        <div class="lg:col-span-6">
+          <div class="relative bg-botticelli p-4 sm:p-6 rounded-3xl border-2 border-coffeebean shadow-hard-lg">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/5] bg-chiffon">
+                  <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Sunlit cafe interior seating" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="bg-chiffon border-2 border-coffeebean rounded-2xl p-3.5 text-center shadow-hard">
+                  <span class="font-script text-2xl text-lipred block leading-none">Maison de Five</span>
+                  <span class="text-[11px] font-bold uppercase tracking-widest text-coffeebean/75">Est. • Five Pillars</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-6">
+                <div class="bg-rosewood text-chiffon border-2 border-coffeebean rounded-2xl p-4 shadow-hard">
+                  <p class="font-serif italic text-sm sm:text-base leading-snug">“Crisp laminated layers outside, cloud-soft crumb inside—paired with velvet crema.”</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/5] bg-chiffon">
+                  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Pouring silky latte art" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cafe Photo Showcase Strip (Spaces, Patisserie, Brews) -->
+      <div class="space-y-10">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-2 border-coffeebean pb-4">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-rosewood">Visual Lookbook</span>
+            <h3 class="font-display text-3xl text-coffeebean">Inside Maison de Five</h3>
+          </div>
+          <!-- Category Filter Tabs for Cafe Photos -->
+          <div class="flex flex-wrap gap-2" id="gallery-filters">
+            <button onclick="filterGallery('all')" class="gallery-tab active bg-rosewood text-chiffon text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border-2 border-coffeebean cursor-pointer">All</button>
+            <button onclick="filterGallery('spaces')" class="gallery-tab bg-chiffon text-coffeebean text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border-2 border-coffeebean hover:bg-botticelli cursor-pointer">Spaces</button>
+            <button onclick="filterGallery('patisserie')" class="gallery-tab bg-chiffon text-coffeebean text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border-2 border-coffeebean hover:bg-botticelli cursor-pointer">Patisserie</button>
+            <button onclick="filterGallery('brews')" class="gallery-tab bg-chiffon text-coffeebean text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border-2 border-coffeebean hover:bg-botticelli cursor-pointer">Brews</button>
+          </div>
+        </div>
+
+        <!-- Categorized Sections: Spaces, Patisserie, Brews -->
+        <div id="cafe-gallery" class="space-y-12">
+          
+          <!-- SECTION 1: SPACES -->
+          <div class="gallery-section space-y-5" data-section="spaces">
+            <div class="flex items-center gap-3">
+              <span class="bg-rosewood text-chiffon text-xs font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full border-2 border-coffeebean shadow-hard">Spaces</span>
+              <div class="h-0.5 flex-1 bg-coffeebean/20"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Bienvenue! -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85', 'Bienvenue! — The Reception &amp; Pastry Counter')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Bienvenue!.jpg" alt="Bienvenue reception area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Bienvenue!</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">The warm reception &amp; pastry counter</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Spaces</span>
+                </div>
+              </div>
+
+              <!-- One Street View, Please! -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=85', 'One Street View, Please! — Sunlit Window Seats')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=700&q=80" alt="Window seats with street view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">One Street View, Please!</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Sunlit window seats overlooking Velaris</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Spaces</span>
+                </div>
+              </div>
+
+              <!-- Notre Endroit -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1200&q=85', 'Notre Endroit — The Usual Corner Booths')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Notre Endroit.jpg" alt="Notre Endroit cozy cafe seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Notre Endroit</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">The usual plush booths for slow mornings</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Spaces</span>
+                </div>
+              </div>
+
+              <!-- Behind de Drinks -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=85', 'Behind de Drinks — Custom Brass Espresso &amp; Matcha Bar')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Behind de Drinks.jpg" alt="Behind de Drinks espresso bar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Behind de Drinks</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Where every shot &amp; matcha is crafted</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Spaces</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: PATISSERIE -->
+          <div class="gallery-section space-y-5" data-section="patisserie">
+            <div class="flex items-center gap-3">
+              <span class="bg-rosewood text-chiffon text-xs font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full border-2 border-coffeebean shadow-hard">Patisserie</span>
+              <div class="h-0.5 flex-1 bg-coffeebean/20"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <!-- Le Pain -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=1200&q=85', 'Le Pain — Naturally Leavened Normandy Sourdough &amp; Shio Pans')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Le Pain.jpg" alt="Le Pain artisan loaves and shio pan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Le Pain</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Country sourdough &amp; salted butter shio pans</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Patisserie</span>
+                </div>
+              </div>
+
+              <!-- Basque Slices -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1200&q=85', 'Basque Slices — Caramelized Burnt Vanilla Cheesecake')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Basque Slices.jpg" alt="Basque Cheesecake Slices" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Basque Slices</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Torched exterior with molten vanilla bean heart</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Patisserie</span>
+                </div>
+              </div>
+
+              <!-- Viennoiserie -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85', 'Viennoiserie — 27-Layer Cultured Butter Croissants &amp; Pastries')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="/images/Viennoiserie.jpg" alt="Golden laminated Viennoiserie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Viennoiserie</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Honeycomb croissants, mille-feuille &amp; choux</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Patisserie</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: BREWS -->
+          <div class="gallery-section space-y-5" data-section="brews">
+            <div class="flex items-center gap-3">
+              <span class="bg-rosewood text-chiffon text-xs font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full border-2 border-coffeebean shadow-hard">Brews</span>
+              <div class="h-0.5 flex-1 bg-coffeebean/20"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <!-- Classic Espresso -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=85', 'Classic Espresso — Tiger-Striped Crema &amp; Velvety Lattes')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Classic Espresso and Velvet Lattes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Classic Espresso</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">House blends, Mont Blanc &amp; dirty sesame pours</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Brews</span>
+                </div>
+              </div>
+
+              <!-- Kokumi Matcha -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=1200&q=85', 'Kokumi Matcha — Stone-Milled Uji Ceremonial Green Tea')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=700&q=80" alt="Kokumi Uji Matcha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Kokumi Matcha</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Bamboo-whisked Uji ceremonial &amp; sea salt clouds</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Brews</span>
+                </div>
+              </div>
+
+              <!-- Sans Cafeine! -->
+              <div onclick="openLightbox('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=85', 'Sans Cafeine! — Botanical Infusions &amp; Decaf Velvets')" class="group cursor-pointer bg-chiffon p-3 rounded-2xl border-2 border-coffeebean shadow-hard hover:-translate-y-1.5 transition-all">
+                <div class="overflow-hidden rounded-xl border border-coffeebean aspect-[4/3] mb-3">
+                  <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=80" alt="Sans Cafeine botanical drinks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    <span class="font-display text-base text-coffeebean block leading-tight">Sans Cafeine!</span>
+                    <span class="text-[11px] font-medium text-coffeebean/75">Caffeine-free botanical infusions &amp; silky cocoas</span>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase bg-botticelli px-2 py-0.5 rounded-full border border-coffeebean shrink-0">Brews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. MENU SECTION (Botticelli Grid with Scrapbook Torn Edges & Rosewood Accents) -->
+  <section id="menu" class="relative botticelli-grid-bg border-y-2 border-coffeebean py-20 sm:py-28">
+    <!-- Top Torn Paper Edge -->
+    <div class="torn-edge-top"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+        <div class="inline-flex items-center gap-2 bg-chiffon border-2 border-coffeebean px-4 py-1.5 rounded-full shadow-hard text-xs font-extrabold uppercase tracking-widest text-rosewood">
+          Menu de La Maison
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl text-coffeebean">
+          Build Your <span class="font-serif italic text-rosewood">Tray!</span>
+        </h2>
+        <p class="text-coffeebean/85 text-sm sm:text-base font-medium">
+          Every drink is pulled to order and every bake comes straight from our deck ovens.
+        </p>
+      </div>
+
+      <!-- Menu Category Filter Pills -->
+      <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12" id="menu-tabs">
+        <button onclick="filterMenu('all')" class="menu-tab active bg-rosewood text-chiffon text-xs font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-coffeebean shadow-hard cursor-pointer transition-all">
+          All Signatures
+        </button>
+        <button onclick="filterMenu('coffee')" class="menu-tab bg-chiffon text-coffeebean text-xs font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-coffeebean shadow-hard hover:bg-botticelli cursor-pointer transition-all">
+          Coffee &amp; Lattes
+        </button>
+        <button onclick="filterMenu('matcha')" class="menu-tab bg-chiffon text-coffeebean text-xs font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-coffeebean shadow-hard hover:bg-botticelli cursor-pointer transition-all">
+          Ceremonial Matcha
+        </button>
+        <button onclick="filterMenu('pastries')" class="menu-tab bg-chiffon text-coffeebean text-xs font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-coffeebean shadow-hard hover:bg-botticelli cursor-pointer transition-all">
+          Sourdough &amp; Viennoiserie
+        </button>
+        <button onclick="filterMenu('cheesecakes')" class="menu-tab bg-chiffon text-coffeebean text-xs font-extrabold uppercase tracking-wider px-5 py-2.5 rounded-full border-2 border-coffeebean shadow-hard hover:bg-botticelli cursor-pointer transition-all">
+          Patisserie &amp; Basque
+        </button>
+      </div>
+
+      <!-- Menu Cards Grid (All 18 Items Priced in IDR) -->
+      <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        
+        <!-- COFFEE & LATTES -->
+        <!-- 1. Notre Classique de La Maison -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Notre Classique de La Maison.jpg" alt="Notre Classique de La Maison Espresso" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">House Signature</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Notre Classique de La Maison</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 20.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Double-ristretto house espresso pulled for syrupy tiger crema, layered with dark cacao, roasted hazelnut, and bright stone-fruit notes.
+            </p>
+          </div>
+          <button onclick="addToTray('Notre Classique de La Maison', 20000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 2. Le Cafe Allonge -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Le Cafe Allonge.jpg" alt="Le Cafe Allonge" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Parisian Long Black</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Le Cafe Allonge</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 17.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Aromatic double espresso lengthened over purified hot or chilled water, preserving golden crema and clean floral clarity.
+            </p>
+          </div>
+          <button onclick="addToTray('Le Cafe Allonge', 17000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 3. Le Nuage Capucin -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Le Nuage Capucin.jpg" alt="Le Nuage Capucin" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Cloud Microfoam</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Le Nuage Capucin</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 19.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Rich house espresso crowned with an airy, cloud-like dome of steamed milk microfoam and a delicate dusting of Valrhona cocoa.
+            </p>
+          </div>
+          <button onclick="addToTray('Le Nuage Capucin', 19000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 4. Mont Blanc. -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Mont Blanc_.jpg" alt="Mont Blanc Coffee" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Cult Favorite</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Mont Blanc.</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 20.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Chilled filter-style espresso topped with whipped vanilla mascarpone cream, candied orange zest, and freshly grated nutmeg.
+            </p>
+          </div>
+          <button onclick="addToTray('Mont Blanc.', 20000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 5. Velvet Cream Latte -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Velvet Cream Latte.jpg" alt="Velvet Cream Latte" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Silky Classic</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Velvet Cream Latte</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 22.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Glossy micro-foamed milk folded into our signature double shot with a touch of raw Madagascar vanilla bean syrup.
+            </p>
+          </div>
+          <button onclick="addToTray('Velvet Cream Latte', 22000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 6. Roasted Sesame Dirty -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="coffee">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Roasted Sesame Dirty.jpg" alt="Roasted Sesame Dirty" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Street Swag</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Roasted Sesame Dirty</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 22.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Ice-cold stone-ground black sesame milk cascade topped with a hot, slow-dripped double ristretto for dramatic hot-meets-cold marbling.
+            </p>
+          </div>
+          <button onclick="addToTray('Roasted Sesame Dirty', 22000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- CEREMONIAL MATCHA -->
+        <!-- 7. Matcha de Ceremonie -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="matcha">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Matcha de Ceremonie.jpg" alt="Matcha de Ceremonie" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Kyoto First-Flush</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Matcha de Ceremonie</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 30.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Stone-milled Uji ceremonial green tea hand-whisked with a bamboo chasen and poured over chilled organic oat or dairy milk.
+            </p>
+          </div>
+          <button onclick="addToTray('Matcha de Ceremonie', 30000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 8. Sea Salt Matcha Cloud -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="matcha">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Sea Salt Matcha Cloud.jpg" alt="Sea Salt Matcha Cloud" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Sweet &amp; Salty</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Sea Salt Matcha Cloud</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 27.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Vibrant umami Uji matcha layered over sweet cream and crowned with a pillowy Guérande sea-salt mascarpone cold foam.
+            </p>
+          </div>
+          <button onclick="addToTray('Sea Salt Matcha Cloud', 27000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 9. Ruby Berry Uji Matcha -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="matcha">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Ruby Berry Uji Matcha.jpg" alt="Ruby Berry Uji Matcha" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">House Compote</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Ruby Berry Uji Matcha</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 32.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              House-simmered ruby strawberry and raspberry compote swirled beneath creamy milk and vibrant hand-whisked Kyoto matcha.
+            </p>
+          </div>
+          <button onclick="addToTray('Ruby Berry Uji Matcha', 32000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- SOURDOUGH & VIENNOISERIE -->
+        <!-- 10. Normandy Sourdough -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=700&q=80" alt="Normandy Sourdough" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">36-Hr Ferment</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Normandy Sourdough</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 30.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Crackling blistered crust with a custardy, wild-yeast open crumb—served warm with whipped Normandy salted butter.
+            </p>
+          </div>
+          <button onclick="addToTray('Normandy Sourdough', 30000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 11. Shio Pan du classique -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Shio Pan du Classique.jpg" alt="Shio Pan du classique" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">#1 Bestseller</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Shio Pan du classique</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 15.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Crispy golden-buttered bottom, feather-soft honeycomb interior, wrapped around a core of French salted butter and flaky Maldon sea salt.
+            </p>
+          </div>
+          <button onclick="addToTray('Shio Pan du classique', 15000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 12. Le Croissant Dore -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Le Croissant Dore" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">AOP Butter</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Le Croissant Dore</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 12.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              27 shatteringly crisp, golden-glazed layers laminated with Isigny Ste-Mère cultured butter for a delicate, airy honeycomb crumb.
+            </p>
+          </div>
+          <button onclick="addToTray('Le Croissant Dore', 12000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 13. Pistachio Praline Croissant -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Pistachio Praline Croissant.jpg" alt="Pistachio Praline Croissant" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Bronte Pistachio</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Pistachio Praline Croissant</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 17.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Flaky twice-baked croissant piped generously with velvety Sicilian pistachio frangipane, crunchy praline, and crushed roasted nuts.
+            </p>
+          </div>
+          <button onclick="addToTray('Pistachio Praline Croissant', 17000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 14. Le Pave Cacao -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Le Pave Cacao.jpg" alt="Le Pave Cacao" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">70% Valrhona</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Le Pave Cacao</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 15.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Cocoa-infused laminated pastry block cradling twin batons of 70% dark Valrhona chocolate and a glossy bittersweet ganache glaze.
+            </p>
+          </div>
+          <button onclick="addToTray('Le Pave Cacao', 15000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 15. Douce Cannelle (cinnamon roll) -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="pastries">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Douce Cannelle.jpg" alt="Douce Cannelle Cinnamon Roll" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Ceylon Cinnamon</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Douce Cannelle</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 20.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Pillowy brioche-croissant cinnamon roll spiraled with muscovado brown butter, warm Ceylon cinnamon, and a light vanilla bean glaze.
+            </p>
+          </div>
+          <button onclick="addToTray('Douce Cannelle', 20000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- PATISSERIE & BASQUE -->
+        <!-- 16. Mille Feuille -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="cheesecakes">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Mille Feuille.jpg" alt="Mille Feuille" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">French Classic</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Mille Feuille</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 22.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Three tiers of caramelized inverse puff pastry layered with silky Tahitian vanilla diplomat cream and toasted puff crumbs.
+            </p>
+          </div>
+          <button onclick="addToTray('Mille Feuille', 22000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 17. Burnt Vanilla Basque -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="cheesecakes">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="Burnt Vanilla Basque Cheesecake" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-rosewood text-chiffon text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Creamy Center</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Burnt Vanilla Basque</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 20.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Caramelized dark-amber exterior giving way to a molten, spoon-tender Madagascar vanilla bean cream cheese heart.
+            </p>
+          </div>
+          <button onclick="addToTray('Burnt Vanilla Basque', 20000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+        <!-- 18. Chou A La Creme -->
+        <div class="menu-card bg-chiffon rounded-3xl border-2 border-coffeebean p-5 shadow-hard-rose flex flex-col justify-between hover:-translate-y-1 transition-all" data-category="cheesecakes">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[16/10] mb-4">
+              <img src="/images/Chou A La Creme.jpg" alt="Chou A La Creme" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-botticelli text-coffeebean text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-coffeebean">Craquelin Puff</span>
+            </div>
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h3 class="font-serif font-bold text-xl text-coffeebean">Chou A La Creme</h3>
+              <span class="font-display text-lg text-rosewood whitespace-nowrap">IDR 15.000</span>
+            </div>
+            <p class="text-xs sm:text-sm text-coffeebean/80 leading-relaxed mb-4">
+              Crisp brown-sugar craquelin choux puff filled to the brim with chilled vanilla bean crème pâtissière and whipped Chantilly.
+            </p>
+          </div>
+          <button onclick="addToTray('Chou A La Creme', 15000)" class="w-full py-2.5 rounded-xl bg-botticelli text-coffeebean font-bold text-xs uppercase tracking-wider border-2 border-coffeebean hover:bg-rosewood hover:text-chiffon transition-colors cursor-pointer">
+            + Add to Tray
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Torn Paper Edge -->
+    <div class="torn-edge-bottom"></div>
+  </section>
+
+  <!-- 6. OUR CREW SECTION -->
+  <section id="crew" class="py-20 sm:py-28 bg-chiffon">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="inline-block bg-rosewood text-chiffon border-2 border-coffeebean px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-hard mb-3">
+            The Faces Behind The Counter
+          </span>
+          <h2 class="font-display text-4xl sm:text-5xl text-coffeebean">
+            Meet The <span class="font-serif italic text-rosewood">Maison</span> Crew
+          </h2>
+        </div>
+        <p class="text-sm sm:text-base text-coffeebean/80 max-w-md font-medium">
+          Five artisans, five pillars—bringing Parisian precision and effortless charm to every cup and crumb.
+        </p>
+      </div>
+
+      <!-- 5 Crew Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <!-- 1. Bridgett Michelle M. D. S. (Head) -->
+        <div class="bg-botticelli/40 rounded-3xl border-2 border-coffeebean p-4 shadow-hard hover:-translate-y-1.5 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/4.6] mb-3.5 bg-chiffon">
+              <img src="/images/gn and go.jpg" alt="Bridgett Michelle M. D. S." class="w-full h-full object-cover" />
+              <span class="absolute bottom-2.5 left-2.5 bg-rosewood text-chiffon text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border border-coffeebean">La Directrice</span>
+            </div>
+            <h3 class="font-display text-lg text-coffeebean leading-snug">Bridgett Michelle M. D. S.</h3>
+            <p class="text-xs font-serif italic font-semibold text-rosewood mt-1">La Directrice de La Maison</p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-coffeebean/20 text-[11px] text-coffeebean/80">
+            Creative visionary &amp; head curator of the five Maison pillars.
+          </div>
+        </div>
+
+        <!-- 2. Felicia Yolanda S. D. (Pastry Baker) -->
+        <div class="bg-botticelli/40 rounded-3xl border-2 border-coffeebean p-4 shadow-hard hover:-translate-y-1.5 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/4.6] mb-3.5 bg-chiffon">
+              <img src="/images/yola.jpeg" alt="Felicia Yolanda S. D." class="w-full h-full object-cover" />
+              <span class="absolute bottom-2.5 left-2.5 bg-chiffon text-coffeebean text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border border-coffeebean">Viennoiserie</span>
+            </div>
+            <h3 class="font-display text-lg text-coffeebean leading-snug">Felicia Yolanda S. D.</h3>
+            <p class="text-xs font-serif italic font-semibold text-rosewood mt-1">Maître de Viennoiserie &amp; Levain</p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-coffeebean/20 text-[11px] text-coffeebean/80">
+            Architect of 27-layer croissants, sourdough &amp; golden shio pans.
+          </div>
+        </div>
+
+        <!-- 3. Hosiana Gita R. (Dessert Maker) -->
+        <div class="bg-botticelli/40 rounded-3xl border-2 border-coffeebean p-4 shadow-hard hover:-translate-y-1.5 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/4.6] mb-3.5 bg-chiffon">
+              <img src="/images/Ci.jpg" alt="Hosiana Gita R." class="w-full h-full object-cover" />
+              <span class="absolute bottom-2.5 left-2.5 bg-chiffon text-coffeebean text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border border-coffeebean">Haute Pâtisserie</span>
+            </div>
+            <h3 class="font-display text-lg text-coffeebean leading-snug">Hosiana Gita R.</h3>
+            <p class="text-xs font-serif italic font-semibold text-rosewood mt-1">Artisane de Haute Pâtisserie</p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-coffeebean/20 text-[11px] text-coffeebean/80">
+            Sculptor of torched Basque slices, mille-feuille &amp; silky choux.
+          </div>
+        </div>
+
+        <!-- 4. Aqilla Cesadryanthy G. (Coffee Brewer) -->
+        <div class="bg-botticelli/40 rounded-3xl border-2 border-coffeebean p-4 shadow-hard hover:-translate-y-1.5 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/4.6] mb-3.5 bg-chiffon">
+              <img src="/images/cesa.jpeg" alt="Aqilla Cesadryanthy G." class="w-full h-full object-cover" />
+              <span class="absolute bottom-2.5 left-2.5 bg-rosewood text-chiffon text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border border-coffeebean">Barista Chief</span>
+            </div>
+            <h3 class="font-display text-lg text-coffeebean leading-snug">Aqilla Cesadryanthy G.</h3>
+            <p class="text-xs font-serif italic font-semibold text-rosewood mt-1">Alchimiste de L’Espresso</p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-coffeebean/20 text-[11px] text-coffeebean/80">
+            Dialing in syrupy tiger-crema shots &amp; velvet latte pours.
+          </div>
+        </div>
+
+        <!-- 5. Theresia De Avila C. A. (Matcha etc Maker) -->
+        <div class="bg-botticelli/40 rounded-3xl border-2 border-coffeebean p-4 shadow-hard hover:-translate-y-1.5 transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean aspect-[4/4.6] mb-3.5 bg-chiffon">
+              <img src="/images/abel.jpg" alt="Theresia De Avila C. A." class="w-full h-full object-cover" />
+              <span class="absolute bottom-2.5 left-2.5 bg-chiffon text-coffeebean text-[9px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border border-coffeebean">Matcha &amp; Elixirs</span>
+            </div>
+            <h3 class="font-display text-lg text-coffeebean leading-snug">Theresia De Avila C. A.</h3>
+            <p class="text-xs font-serif italic font-semibold text-rosewood mt-1">Maître du Thé &amp; des Élixirs</p>
+          </div>
+          <div class="mt-3 pt-2.5 border-t border-coffeebean/20 text-[11px] text-coffeebean/80">
+            Bamboo-whisking ceremonial Uji matcha &amp; signature clouds.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. VISIT US / SOCIAL MEDIA / CONTACT US SECTION -->
+  <section id="visit" class="relative bg-botticelli/45 border-t-2 border-coffeebean pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="inline-block bg-rosewood text-chiffon border-2 border-coffeebean px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-hard">
+          Visit Us
+        </span>
+        <h2 class="font-display text-4xl sm:text-5xl text-coffeebean">
+          Pull Up To <span class="font-serif italic text-rosewood">Maison de Five</span>
+        </h2>
+        <p class="text-coffeebean/85 text-sm sm:text-base font-medium">
+          Tucked on Velaris in Meridian City. Look for the Botticelli-striped awning and the scent of warm butter!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
+        
+        <!-- Left 7 Cols: Interactive Custom Illustrated Cafe Map + Address Card -->
+        <div class="lg:col-span-7 bg-chiffon rounded-3xl border-2 border-coffeebean p-5 sm:p-6 shadow-hard-lg flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rosewood"></span>
+                <span class="font-display text-xl text-coffeebean">Visit Us — Flagship Location</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider bg-botticelli px-3 py-1 rounded-full border border-coffeebean">Meridian City</span>
+            </div>
+
+            <!-- Stylized Interactive Vector Neighborhood Map (Velaris, Meridian City) -->
+            <div class="relative rounded-2xl overflow-hidden border-2 border-coffeebean bg-[#E6F1F4] aspect-[16/10] mb-5 select-none">
+              <svg viewBox="0 0 800 500" class="w-full h-full object-cover">
+                <!-- Background Blocks -->
+                <rect width="800" height="500" fill="#E6F1F4"/>
+                <!-- Park Green Area -->
+                <rect x="40" y="40" width="210" height="160" rx="24" fill="#D5E8D4" stroke="#2D120D" stroke-width="2"/>
+                <text x="145" y="125" text-anchor="middle" fill="#2D120D" font-family="Plus Jakarta Sans" font-weight="700" font-size="13" opacity="0.7">JARDIN VELARIS</text>
+
+                <!-- City Blocks -->
+                <rect x="310" y="40" width="210" height="160" rx="18" fill="#FFF8CA" stroke="#2D120D" stroke-width="2"/>
+                <rect x="580" y="40" width="180" height="160" rx="18" fill="#FFF8CA" stroke="#2D120D" stroke-width="2"/>
+                <rect x="40" y="260" width="210" height="200" rx="18" fill="#FFF8CA" stroke="#2D120D" stroke-width="2"/>
+                <rect x="580" y="260" width="180" height="200" rx="18" fill="#FFF8CA" stroke="#2D120D" stroke-width="2"/>
+
+                <!-- Streets -->
+                <path d="M0,230 L800,230" stroke="#FFFFFF" stroke-width="36"/>
+                <path d="M0,230 L800,230" stroke="#2D120D" stroke-width="2" stroke-dasharray="8 8" opacity="0.35"/>
+                <path d="M280,0 L280,500" stroke="#FFFFFF" stroke-width="34"/>
+                <path d="M550,0 L550,500" stroke="#FFFFFF" stroke-width="34"/>
+
+                <!-- Street Labels -->
+                <text x="145" y="235" text-anchor="middle" fill="#2D120D" font-family="Plus Jakarta Sans" font-weight="800" font-size="12" letter-spacing="2">VELARIS</text>
+                <text x="670" y="235" text-anchor="middle" fill="#2D120D" font-family="Plus Jakarta Sans" font-weight="800" font-size="12" letter-spacing="2">MERIDIAN BLVD</text>
+                <text x="280" y="380" text-anchor="middle" fill="#2D120D" font-family="Plus Jakarta Sans" font-weight="800" font-size="11" letter-spacing="2" transform="rotate(-90 280 380)">SUITE 05 WALK</text>
+
+                <!-- Highlighted Cafe Building -->
+                <rect x="330" y="275" width="190" height="150" rx="22" fill="#CDE3E8" stroke="#2D120D" stroke-width="3"/>
+                <!-- Botticelli Awning Stripes Roof -->
+                <rect x="345" y="290" width="160" height="32" rx="8" fill="#6B0B0C" stroke="#2D120D" stroke-width="2"/>
+                <text x="425" y="311" text-anchor="middle" fill="#FFF8CA" font-family="Fraunces" font-style="italic" font-weight="700" font-size="14">Maison de Five</text>
+
+                <!-- Animated Pulsing Pin -->
+                <g transform="translate(425, 240)">
+                  <circle cx="0" cy="0" r="24" fill="#6B0B0C" opacity="0.2">
+                    <animate attributeName="r" values="16;30;16" dur="2.2s" repeatCount="indefinite" />
+                  </circle>
+                  <path d="M0,-34 C-14,-34 -24,-23 -24,-10 C-24,8 0,28 0,28 C0,28 24,8 24,-10 C24,-23 14,-34 0,-34 Z" fill="#6B0B0C" stroke="#2D120D" stroke-width="2.5"/>
+                  <circle cx="0" cy="-11" r="8" fill="#FFF8CA"/>
+                </g>
+              </svg>
+
+              <!-- Floating Map Action Pill -->
+              <a href="https://maps.google.com/?q=45+Velaris+Suite+05+Meridian+City+101425" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-rosewood text-chiffon text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border-2 border-coffeebean shadow-hard hover:bg-coffeebean transition-colors flex items-center gap-1.5">
+                <span>Open In Google Maps</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Address & Hours Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="bg-botticelli/40 rounded-2xl border-2 border-coffeebean p-4">
+              <div class="text-[11px] font-extrabold uppercase tracking-widest text-rosewood mb-1">Our Address</div>
+              <p class="font-bold text-sm text-coffeebean">45 Velaris, Suite 05</p>
+              <p class="text-xs text-coffeebean/80">Meridian City, CP 101425</p>
+            </div>
+            <div class="bg-botticelli/40 rounded-2xl border-2 border-coffeebean p-4">
+              <div class="text-[11px] font-extrabold uppercase tracking-widest text-rosewood mb-1">Patisserie Hours</div>
+              <p class="font-bold text-sm text-coffeebean">Mon – Fri: 7:30 AM – 7:30 PM</p>
+              <p class="text-xs text-coffeebean/80">Sat – Sun: 8:00 AM – 9:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Cols: Social Media & Contact Us Form -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- Social Media Card -->
+          <div class="bg-rosewood text-chiffon rounded-3xl border-2 border-coffeebean p-6 shadow-hard-lg">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-botticelli">Stay Connected</span>
+              <span class="text-xs bg-chiffon text-coffeebean font-bold px-2.5 py-0.5 rounded-full border border-coffeebean">@maisondefive</span>
+            </div>
+            <h3 class="font-display text-2xl sm:text-3xl mb-2">Sip Bold, Stay Sweet.</h3>
+            <p class="text-xs sm:text-sm text-chiffon/85 mb-5">
+              Catch daily pastry drop alerts, secret off-menu matcha blends, and weekend vinyl sessions.
+            </p>
+            <div class="grid grid-cols-3 gap-3">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="bg-chiffon text-coffeebean hover:bg-botticelli transition-colors rounded-2xl border-2 border-coffeebean p-3 text-center shadow-hard">
+                <div class="font-display text-sm">Instagram</div>
+                <div class="text-[10px] font-bold text-rosewood">@maisondefive</div>
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="bg-chiffon text-coffeebean hover:bg-botticelli transition-colors rounded-2xl border-2 border-coffeebean p-3 text-center shadow-hard">
+                <div class="font-display text-sm">TikTok</div>
+                <div class="text-[10px] font-bold text-rosewood">@maisondefive</div>
+              </a>
+              <a href="mailto:bonjour@maisondefive.com" class="bg-chiffon text-coffeebean hover:bg-botticelli transition-colors rounded-2xl border-2 border-coffeebean p-3 text-center shadow-hard">
+                <div class="font-display text-sm">Email</div>
+                <div class="text-[10px] font-bold text-rosewood">Say Bonjour</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Us Form Card -->
+          <div class="bg-chiffon rounded-3xl border-2 border-coffeebean p-6 shadow-hard-lg flex-1">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-rosewood">Contact Us</span>
+            <h3 class="font-display text-2xl text-coffeebean mt-1 mb-1">Send A Love Note</h3>
+            <p class="text-xs text-coffeebean/75 mb-4">Reserve a velvet booth, pre-order a box of pastries, or inquire about private events.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-3.5">
+              <div>
+                <input type="text" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-xl bg-botticelli/25 border-2 border-coffeebean text-sm text-coffeebean placeholder-coffeebean/55 focus:outline-none focus:bg-chiffon" />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input type="email" required placeholder="Email Address" class="w-full px-4 py-2.5 rounded-xl bg-botticelli/25 border-2 border-coffeebean text-sm text-coffeebean placeholder-coffeebean/55 focus:outline-none focus:bg-chiffon" />
+                <select class="w-full px-4 py-2.5 rounded-xl bg-botticelli/25 border-2 border-coffeebean text-sm text-coffeebean focus:outline-none focus:bg-chiffon">
+                  <option>Pastry Box Pre-Order</option>
+                  <option>Table / Booth Inquiry</option>
+                  <option>Private Event / Catering</option>
+                  <option>General Hello</option>
+                </select>
+              </div>
+              <div>
+                <textarea rows="3" required placeholder="Tell us what you're craving..." class="w-full px-4 py-2.5 rounded-xl bg-botticelli/25 border-2 border-coffeebean text-sm text-coffeebean placeholder-coffeebean/55 focus:outline-none focus:bg-chiffon"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3 rounded-xl bg-rosewood text-chiffon font-bold text-xs uppercase tracking-widest border-2 border-coffeebean shadow-hard hover:bg-coffeebean transition-colors cursor-pointer">
+                Send Message ✨
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="border-t-2 border-coffeebean pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-bold text-coffeebean/80">
+        <div class="flex items-center gap-2">
+          <span class="font-script text-3xl text-lipred leading-none">Maison de Five</span>
+          <svg class="w-6 h-4"><use href="#kiss-mark"></use></svg>
+        </div>
+        <div class="text-center">
+          © 2026 Maison de Five Patisserie &amp; Café • Love, Quality, Aroma, Texture &amp; Style.
+        </div>
+        <div class="flex items-center gap-4 uppercase tracking-wider">
+          <a href="#home" class="hover:text-rosewood">Top ↑</a>
+          <a href="#menu" class="hover:text-rosewood">Menu</a>
+          <a href="#visit" class="hover:text-rosewood">Visit Us</a>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- 8. SLIDE-OVER TRAY DRAWER (Interactive Order Preview in IDR) -->
+  <div id="tray-overlay" onclick="toggleTray()" class="fixed inset-0 bg-coffeebean/50 backdrop-blur-xs z-50 hidden"></div>
+  <aside id="tray-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-chiffon border-l-2 border-coffeebean z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-6">
+    <div>
+      <div class="flex items-center justify-between border-b-2 border-coffeebean pb-4 mb-5">
+        <div class="flex items-center gap-2">
+          <span class="font-display text-2xl text-coffeebean">Your Tray</span>
+          <svg class="w-6 h-4"><use href="#kiss-mark"></use></svg>
+        </div>
+        <button onclick="toggleTray()" class="w-9 h-9 rounded-full bg-botticelli border-2 border-coffeebean flex items-center justify-center font-bold text-coffeebean hover:bg-rosewood hover:text-chiffon cursor-pointer">✕</button>
+      </div>
+
+      <div id="tray-items" class="space-y-3 max-h-[55vh] overflow-y-auto pr-1">
+        <p class="text-sm text-coffeebean/70 italic text-center py-10">Your tray is currently empty. Add a Shio Pan du classique or Velvet Cream Latte from the menu!</p>
+      </div>
+    </div>
+
+    <div class="border-t-2 border-coffeebean pt-4 space-y-4">
+      <div class="flex items-center justify-between text-base font-bold">
+        <span>Estimated Subtotal</span>
+        <span id="tray-total" class="font-display text-xl text-rosewood">IDR 0</span>
+      </div>
+      <button onclick="checkoutTray()" class="w-full py-3.5 rounded-full bg-rosewood text-chiffon font-bold text-xs uppercase tracking-widest border-2 border-coffeebean shadow-hard hover:bg-coffeebean transition-colors cursor-pointer">
+        Place Pickup Order
+      </button>
+    </div>
+  </aside>
+
+  <!-- 9. LIGHTBOX MODAL FOR CAFE PHOTOS -->
+  <div id="lightbox" onclick="closeLightbox()" class="fixed inset-0 bg-coffeebean/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="bg-chiffon border-2 border-coffeebean rounded-3xl p-4 max-w-2xl w-full shadow-hard-lg">
+      <div class="rounded-2xl overflow-hidden border-2 border-coffeebean mb-3">
+        <img id="lightbox-img" src="" alt="Cafe preview" class="w-full max-h-[70vh] object-cover" />
+      </div>
+      <div class="flex items-center justify-between">
+        <p id="lightbox-caption" class="font-serif font-bold text-base text-coffeebean"></p>
+        <button onclick="closeLightbox()" class="bg-rosewood text-chiffon text-xs font-bold uppercase px-4 py-2 rounded-full border border-coffeebean cursor-pointer">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-coffeebean text-chiffon px-5 py-3 rounded-full border-2 border-botticelli shadow-hard text-xs font-bold uppercase tracking-wider opacity-0 pointer-events-none transition-opacity duration-300">
+    Added to your Maison tray!
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Cafe Gallery Filter (Spaces, Patisserie, Brews)
+    function filterGallery(category) {
+      const tabs = document.querySelectorAll('.gallery-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-rosewood', 'text-chiffon');
+        tab.classList.add('bg-chiffon', 'text-coffeebean');
+      });
+      event.target.classList.remove('bg-chiffon', 'text-coffeebean');
+      event.target.classList.add('bg-rosewood', 'text-chiffon');
+
+      const sections = document.querySelectorAll('.gallery-section');
+      sections.forEach(sec => {
+        if (category === 'all' || sec.dataset.section === category) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+
+    // Menu Category Filter
+    function filterMenu(category) {
+      const tabs = document.querySelectorAll('.menu-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-rosewood', 'text-chiffon');
+        tab.classList.add('bg-chiffon', 'text-coffeebean');
+      });
+      event.target.classList.remove('bg-chiffon', 'text-coffeebean');
+      event.target.classList.add('bg-rosewood', 'text-chiffon');
+
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Functions
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption;
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+    }
+
+    // Format IDR currency cleanly (e.g., IDR 20.000)
+    function formatIDR(amount) {
+      return 'IDR ' + amount.toLocaleString('id-ID');
+    }
+
+    // Interactive Tray Logic
+    let tray = [];
+
+    function toggleTray() {
+      const drawer = document.getElementById('tray-drawer');
+      const overlay = document.getElementById('tray-overlay');
+      drawer.classList.toggle('translate-x-full');
+      overlay.classList.toggle('hidden');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.remove('opacity-0');
+      setTimeout(() => toast.classList.add('opacity-0'), 2200);
+    }
+
+    function addToTray(name, price) {
+      const existing = tray.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        tray.push({ name, price, qty: 1 });
+      }
+      renderTray();
+      showToast(`Added ${name} to tray ✨`);
+    }
+
+    function removeFromTray(index) {
+      tray.splice(index, 1);
+      renderTray();
+    }
+
+    function renderTray() {
+      const container = document.getElementById('tray-items');
+      const countBadge = document.getElementById('tray-count');
+      const totalEl = document.getElementById('tray-total');
+
+      const totalQty = tray.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = tray.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      countBadge.textContent = totalQty;
+      totalEl.textContent = formatIDR(totalPrice);
+
+      if (tray.length === 0) {
+        container.innerHTML = '<p class="text-sm text-coffeebean/70 italic text-center py-10">Your tray is currently empty. Add a Shio Pan du classique or Velvet Cream Latte from the menu!</p>';
+        return;
+      }
+
+      container.innerHTML = tray.map((item, idx) => `
+        <div class="flex items-center justify-between bg-botticelli/35 border-2 border-coffeebean rounded-2xl p-3">
+          <div>
+            <div class="font-serif font-bold text-sm text-coffeebean">${item.name}</div>
+            <div class="text-xs text-rosewood font-bold">${formatIDR(item.price)} × ${item.qty}</div>
+          </div>
+          <button onclick="removeFromTray(${idx})" class="text-xs font-bold uppercase px-2.5 py-1 rounded-lg bg-chiffon border border-coffeebean hover:bg-rosewood hover:text-chiffon cursor-pointer">Remove</button>
+        </div>
+      `).join('');
+    }
+
+    function checkoutTray() {
+      if (tray.length === 0) {
+        showToast('Add a pastry or drink first!');
+        return;
+      }
+      tray = [];
+      renderTray();
+      toggleTray();
+      showToast('Merci! Your Maison de Five order is being prepared.');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      e.target.reset();
+      showToast('Love note received! We will reply shortly 💋');
+    }
+  </script>
+</body>
+</html>
